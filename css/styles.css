@@ -47,5 +47,6 @@ button {
   background-color: #bbbbbb;
   border: none;
   border-radius: 50%;
+  display: inline-block;
 
 }
