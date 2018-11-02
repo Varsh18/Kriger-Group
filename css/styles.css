@@ -40,3 +40,7 @@ button {
   font-family: Raleway;
   cursor: pointer;
 }
+.step {
+  height: 15px;
+
+}
