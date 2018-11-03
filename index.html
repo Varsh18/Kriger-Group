@@ -74,6 +74,9 @@
 
         //increase or decrease current tab by one
           currentTab = currentTab + n;
+          if (currentTab >= x.length) {
+          return false;
+      }
        showTab(currentTab);
   }
   </script>
