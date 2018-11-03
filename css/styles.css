@@ -53,3 +53,6 @@ button {
 .step.active {
   opacity: 1;
 }
+.step.finish {
+  background-color: #4CAF50;
+}
