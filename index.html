@@ -71,6 +71,9 @@
       var x = document.getElementsByClassName("tab");
        if (n == 1 && !validateForm()) return false;
         x[currentTab].style.display = "none";
+
+        //increase or decrease current tab by one
+          currentTab = currentTab + n;
   }
   </script>
   </body>
