@@ -102,6 +102,7 @@
         //increase or decrease current tab by one
           currentTab = currentTab + n;
           if (currentTab >= x.length) {
+            document.getElementById("regForm").submit();
           return false;
       }
        showTab(currentTab);
