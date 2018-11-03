@@ -56,3 +56,6 @@ button {
 .step.finish {
   background-color: #4CAF50;
 }
+.tab {
+  display: none;
+}
