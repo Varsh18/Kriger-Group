@@ -37,7 +37,7 @@ button:hover {
   opacity: 0.8;
 }
 button {
-  background-color: #4CAF50;
+  background-color: rgba(232, 67, 147,1.0);
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -65,7 +65,7 @@ button {
   display: none;
 }
 #prevBtn {
-  background-color: #bbbbbb;
+  background-color:rgba(253, 121, 168,0.6);
 }
 input.invalid {
   background-color: #ffdddd;
