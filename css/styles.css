@@ -62,3 +62,6 @@ button {
 #prevBtn {
   background-color: #bbbbbb;
 }
+input.invalid {
+  background-color: #ffdddd;
+}
