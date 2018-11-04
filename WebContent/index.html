@@ -236,6 +236,10 @@
     }
     x[n].className += " active";
 }
+  function date(name,date){
+	  if(date.length==2 || date.length==5)
+	  document.getElementsByName(name)[0].value=date+'/';
+	  }
   </script>
   </body>
 </html>
