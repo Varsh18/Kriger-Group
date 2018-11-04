@@ -53,7 +53,7 @@
         <option value="Vendor Employee">Vendor Employee</option>
    </select>
    Start Time:
-           <input placeholder="HHMM" oninput="this.className = ''" name="stime">
+           <input placeholder="HHMM" onkeypress="time(this.name,this.value)" oninput="this.className = ''" name="stime">
    End Time:
            <input placeholder="HHMM" oninput="this.className = ''" name="etime">
    Start Date:
