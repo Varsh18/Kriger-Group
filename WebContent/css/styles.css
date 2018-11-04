@@ -32,6 +32,7 @@ input[type="radio"]{
 }
 #employee,#bank{
 	width:100%;
+	padding:1%;
 }
 textarea{
   width:100%;
