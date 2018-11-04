@@ -84,7 +84,7 @@
         <input type="radio" name="iso" value="yes" checked> Yes
         <input type="radio" name="iso" value="no"> No<br/>
     End date:
-          <input placeholder="End Date" oninput="this.className = ''" name="enddate">
+          <input placeholder="End Date" onkeypress="date(this.name,this.value)" oninput="this.className = ''" name="enddate">
     Duration:
           <input placeholder="Duration" oninput="this.className = ''" name="duration">
 
