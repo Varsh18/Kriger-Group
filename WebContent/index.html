@@ -153,6 +153,14 @@
 
         //increase or decrease current tab by one
           currentTab = currentTab + n;
+          if(currentTab == 1)
+          {
+        	var check=document.getElementsByName('type')[0].value;
+        	if(check == 'Vendor Employee')
+        		document.getElementsByClassName('full')[0].style.display="none";
+        	else
+        		document.getElementsByClassName("vendor")[0].style.display="none";
+          }
           if (currentTab >= x.length) {
             document.getElementById("regForm").submit();
           return false;
