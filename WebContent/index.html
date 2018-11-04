@@ -212,12 +212,13 @@
       y = x[currentTab].getElementsByTagName("input");
       z = x[currentTab].getElementsByTagName("textarea");
       j=y.length;
+      k=z.length;
       if(currentTab == 1){
     	var check=document.getElementsByName('type')[0].value;
     	if(check == 'Vendor Employee')
       		i=3;
       	else
-      		j=3;
+      		j=3,k=0;
       }
       for (; i < j; i++) {
         if (y[i].value == "") {
@@ -225,7 +226,7 @@
           valid = false;
     }
       }
-        for (i=0; i < z.length; i++) {
+        for (i=0; i < k; i++) {
             if (z[i].value == "") {
               z[i].className += " invalid";
               valid = false;
