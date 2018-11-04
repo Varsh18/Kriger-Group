@@ -30,7 +30,7 @@ input {
 input[type="radio"]{
   width: 6%;
 }
-#employee{
+#employee,#bank{
 	width:100%;
 }
 textarea{
