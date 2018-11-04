@@ -38,6 +38,7 @@ input[type="radio"]{
 }
 textarea{
   width:100%;
+    font-size: 17px;
 }
 button:hover {
   opacity: 0.8;
