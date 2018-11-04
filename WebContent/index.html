@@ -168,10 +168,18 @@
        showTab(currentTab);
   }
   function validateForm() {
-      var x, y, i, valid = true;
+      var x, y, i=0, j,valid = true;
       x = document.getElementsByClassName("tab");
       y = x[currentTab].getElementsByTagName("input");
-      for (i = 0; i < y.length; i++) {
+      j=y.length;
+      if(currentTab == 1){
+    	var check=document.getElementsByName('type')[0].value;
+      	if(check == 'Vendor Employee')
+      		i=3;
+      	else
+      		j=3;
+      }
+      for (; i < j; i++) {
         if (y[i].value == "") {
           y[i].className += " invalid";
           valid = false;
