@@ -178,6 +178,7 @@
   }
   function nextPrev(n) {
       var x = document.getElementsByClassName("tab");
+      var check=document.getElementsByName('type')[0].value;
        if (n == 1 && !validateForm()) return false;
         x[currentTab].style.display = "none";
 
@@ -190,8 +191,7 @@
         }
           if(currentTab == 1)
           {
-        	var check=document.getElementsByName('type')[0].value;
-        	if(check == 'Vendor Employee')
+        	 if(check == 'Vendor Employee')
         		document.getElementsByClassName('full')[0].style.display="none";
         	else
         		document.getElementsByClassName("vendor")[0].style.display="none";
@@ -207,13 +207,14 @@
        showTab(currentTab);
   }
   function validateForm() {
-      var x, y, i=0, j,valid = true;
+      var x, y,z, i=0, j,valid = true;
       x = document.getElementsByClassName("tab");
       y = x[currentTab].getElementsByTagName("input");
+      z = x[currentTab].getElementsByTagName("textarea");
       j=y.length;
       if(currentTab == 1){
     	var check=document.getElementsByName('type')[0].value;
-      	if(check == 'Vendor Employee')
+    	if(check == 'Vendor Employee')
       		i=3;
       	else
       		j=3;
@@ -223,6 +224,12 @@
           y[i].className += " invalid";
           valid = false;
     }
+      }
+        for (i=0; i < z.length; i++) {
+            if (z[i].value == "") {
+              z[i].className += " invalid";
+              valid = false;
+        }
   }
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
