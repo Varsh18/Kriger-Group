@@ -90,7 +90,11 @@ input.invalid ,.invalid{
     width: 150px;
     height:200px;   
     border: 2px solid blue;
+    margin-left:20%;
 }
 #photo{
 	margin-top:0px;
+}
+.title{
+	padding-left:11%;
 }
