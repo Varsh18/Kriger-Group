@@ -109,3 +109,8 @@ input[type="file"]{
 #dob,#jdate{
 	width:13%;
 }
+.address{
+	display:flex;
+	flex-wrap:wrap;
+	width:100%;
+}
