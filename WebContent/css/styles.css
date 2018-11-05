@@ -85,3 +85,9 @@ input.invalid ,.invalid{
 	display:flex;
 	flex-wrap:wrap;
 }
+#pass{
+   box-sizing: border-box;
+    width: 150px;
+    height:200px;   
+    border: 2px solid blue;
+}
