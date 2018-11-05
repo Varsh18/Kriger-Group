@@ -91,3 +91,6 @@ input.invalid ,.invalid{
     height:200px;   
     border: 2px solid blue;
 }
+#photo{
+	margin-top:0px;
+}
