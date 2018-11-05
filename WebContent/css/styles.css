@@ -103,8 +103,8 @@ input[type="file"]{
 hr{
 	margin-top:5%;
 }
-#fname{
-	width:25%;
+#fname,#lname{
+	width:28%;
 }
 #salutation{
 	width:15%;
