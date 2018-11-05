@@ -17,9 +17,13 @@ body {
   color:rgba(84, 109, 229,1.0);
   font-weight:bold;
 }
-h1,h2 {
+h1{
   text-align: center;
   color: rgba(142, 68, 173,1.0);
+}
+h2{
+	color:#00b894;
+	text-align: center;
 }
 input {
   padding: 10px;
