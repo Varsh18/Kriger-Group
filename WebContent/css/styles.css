@@ -103,7 +103,7 @@ input[type="file"]{
 hr{
 	margin-top:5%;
 }
-#fname,#lname{
+#fname,#lname,#role,#rhead{
 	width:28%;
 }
 #salutation{
