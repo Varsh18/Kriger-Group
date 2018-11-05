@@ -81,3 +81,7 @@ button {
 input.invalid ,.invalid{
   background-color: #ffdddd;
 }
+#header{
+	display:flex;
+	flex-wrap:wrap;
+}
