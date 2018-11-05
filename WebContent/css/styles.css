@@ -100,9 +100,6 @@ input[type="file"]{
 	margin-top:-10%;
 	margin-left:5%;
 }
-hr{
-	margin-top:5%;
-}
 #fname,#lname,#role,#rhead{
 	width:28%;
 }
