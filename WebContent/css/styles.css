@@ -117,3 +117,6 @@ input[type="file"]{
 .current,.place{
 	width:50%;
 }
+#pincode{
+	width:40%;
+}
