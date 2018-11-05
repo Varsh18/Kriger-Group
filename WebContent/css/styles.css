@@ -88,7 +88,7 @@ input.invalid ,.invalid{
 #pass{
    box-sizing: border-box;
     width: 150px;
-    height:200px;   
+    height:200px;
     border: 2px solid blue;
     margin-left:20%;
 }
@@ -96,5 +96,5 @@ input.invalid ,.invalid{
 	margin-top:0px;
 }
 .title{
-	padding-left:11%;
+	width:50%;
 }
