@@ -100,3 +100,6 @@ input.invalid ,.invalid{
 .logo{
 	width:20%;
 }
+input[type="file"]{
+	width:130px;
+}
