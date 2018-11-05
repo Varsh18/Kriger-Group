@@ -109,6 +109,6 @@ hr{
 #salutation{
 	width:15%;
 }
-#dob{
+#dob,#jdate{
 	width:13%;
 }
