@@ -23,6 +23,13 @@
 <input type="file" accept="image/*" onchange="loadFile(event)">
 </div>
   </div>
+  
+   Start Time:
+           <input placeholder="HHMM" onkeypress="time(this.name,this.value)" oninput="this.className = ''" name="stime">
+
+   End Time:
+           <input placeholder="HHMM" onkeypress="time(this.name,this.value)"  oninput="this.className = ''" name="etime">
+  
   <hr/>
   <div class="tab">
       Gender:
@@ -85,13 +92,6 @@
 
    Mobile number[Secondary]:
            <input placeholder="Mobile Number"  oninput="this.className = ''" name="smobile">
-
-
-   Start Time:
-           <input placeholder="HHMM" onkeypress="time(this.name,this.value)" oninput="this.className = ''" name="stime">
-
-   End Time:
-           <input placeholder="HHMM" onkeypress="time(this.name,this.value)"  oninput="this.className = ''" name="etime">
 
 
   </div>
