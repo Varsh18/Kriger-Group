@@ -114,3 +114,6 @@ input[type="file"]{
 	flex-wrap:wrap;
 	width:100%;
 }
+.current,.place{
+	width:50%;
+}
