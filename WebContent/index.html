@@ -72,9 +72,12 @@
         <option value="Vendor Employee">Vendor Employee</option>
    </select>
    <hr/>
+   <div class="address">
+   <div class="box current">
     Current Address:<br/>
      <textarea rows="5" cols="45" oninput="this.className = ''" ></textarea><br/>
-
+</div>
+<div class="box place">
      Sub Urban:
        <input placeholder="Sub urban" oninput="this.className = ''" id="surban" name="surban">
 
@@ -83,13 +86,16 @@
 
    Pincode:
        <input placeholder="Pincode" maxlength="6" oninput="this.className = ''" name="pincode">
-
+</div>
+<div class="box email">
    Email Address:
            <input placeholder="Email Address"  oninput="this.className = ''" name="email">
-
+</div>
+<div class="box mobile">
    Mobile number[Primary]:
            <input placeholder="Mobile Number"  oninput="this.className = ''" name="pmobile">
-
+</div>
+</div>
    Mobile number[Secondary]:
            <input placeholder="Mobile Number"  oninput="this.className = ''" name="smobile">
 
