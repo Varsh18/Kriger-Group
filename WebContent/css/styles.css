@@ -166,7 +166,7 @@ input[type="file"]{
     
 }
 
-#salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode{
+#salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode,#bgroup{
 	width:100%;
 }
 	}
