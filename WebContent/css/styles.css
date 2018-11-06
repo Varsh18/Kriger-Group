@@ -129,5 +129,7 @@ input[type="file"]{
 	padding-left:15%;
     padding-right:15%;
 }
-
+.title{
+	width:100%;
+}
 }
