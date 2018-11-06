@@ -141,10 +141,10 @@ input[type="file"]{
 }
 }
 @media screen and (min-width:321px ) and (max-width: 680px) {
-.logo{
+	.logo{
 	width:100%;
-	padding-left:30%;
-    padding-right:30%;
+	padding-left:15%;
+    padding-right:15%;
     margin-bottom:0px;
 }
 .title{
@@ -154,6 +154,13 @@ input[type="file"]{
 	margin-left:15%;
     margin-right:15%;
 }
+#photo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 #salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode{
 	width:100%;
 }
