@@ -117,7 +117,7 @@ input[type="file"]{
 .current,.place{
 	width:50%;
 }
-#pincode{
+#pincode,#ppincode{
 	width:40%;
 }
 .pincode{
@@ -144,7 +144,7 @@ input[type="file"]{
 	margin-left:15%;
     margin-right:15%;
 }
-#salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode{
+#salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode,#ppincode{
 	width:100%;
 }
 }
@@ -174,7 +174,7 @@ input[type="file"]{
     
 }
 
-#salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode,#bgroup{
+#salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode,#bgroup,#ppincode{
 	width:100%;
 }
 	}
