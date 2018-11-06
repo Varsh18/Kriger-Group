@@ -141,23 +141,28 @@ input[type="file"]{
 }
 }
 @media screen and (min-width:321px ) and (max-width: 680px) {
-	.logo{
+.head{
 	width:100%;
     margin-left:0px;
     margin-right:0px;
+}
+.logo{
+   width:55%; 
+   margin-left:auto;
+   margin-right:auto;
+ 
+	
+}
+#photo{
+	padding-left:0px;
 }
 .title{
 	width:100%;
 }
 #pass{
-	margin-left:15%;
-    margin-right:15%;
-}
-.logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+	margin-left:25%;
+    margin-right:25%;
+    
 }
 
 #salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode{
