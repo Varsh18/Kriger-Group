@@ -69,7 +69,7 @@
    <div class="address">
    <div class="box current">
     Current Address:<br/>
-     <textarea rows="5" cols="45" oninput="this.className = ''" ></textarea><br/>
+     <textarea rows="5" cols="45" id="address" oninput="this.className = ''" ></textarea><br/>
 </div>
 <div class="box place">
      Sub Urban:
@@ -89,7 +89,7 @@
 </div>
 <div class="box mobile">
    Mobile number[Primary]:
-           <input placeholder="Mobile Number"  oninput="this.className = ''" name="pmobile">
+           <input placeholder="Mobile Number"  id="pmobile" oninput="this.className = ''" name="pmobile">
 </div>
 </div>
 <hr/>
@@ -98,7 +98,7 @@
    <div class="box current">
    <input type="checkbox" onclick="copyAddress()"  id="copy"  />Same as Current address<br/>
  Permanent Address:<br/>
-     <textarea rows="5" cols="45" oninput="this.className = ''" ></textarea><br/>
+     <textarea rows="5" cols="45" id="paddress"oninput="this.className = ''" ></textarea><br/>
 </div>
 <div class="box place">
      Sub Urban:
@@ -119,7 +119,7 @@
 <div class="box mobile">
   
    Mobile number:
-           <input placeholder="Mobile Number"  oninput="this.className = ''" name="smobile">
+           <input placeholder="Mobile Number"  id="smobile" oninput="this.className = ''" name="smobile">
 
 </div>
 </div>
@@ -292,6 +292,14 @@
 	    var photo = document.getElementById('photo');
 	    photo.src = URL.createObjectURL(event.target.files[0]);
 	  };
+	  function copyAddress(){
+		  document.getElementById('paddress').value= document.getElementById('address').value;
+		  document.getElementById('psurban').value= document.getElementById('surban').value;
+		  document.getElementById('pstate').value= document.getElementById('state').value;
+		  document.getElementById('ppincode').value= document.getElementById('pincode').value;
+		  document.getElementById('pemail').value= document.getElementById('email').value;
+		  document.getElementById('smobile').value= document.getElementById('pmobile').value;
+	  }
   </script>
   </body>
 </html>
