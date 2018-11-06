@@ -157,7 +157,7 @@ input[type="file"]{
 #photo{
 	padding-left:0px;
 }
-.title{
+.title,#email{
 	width:100%;
 }
 #pass{
