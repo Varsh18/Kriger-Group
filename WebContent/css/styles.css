@@ -143,9 +143,8 @@ input[type="file"]{
 @media screen and (min-width:321px ) and (max-width: 680px) {
 	.logo{
 	width:100%;
-	padding-left:15%;
-    padding-right:15%;
-    margin-bottom:0px;
+    margin-left:0px;
+    margin-right:0px;
 }
 .title{
 	width:100%;
