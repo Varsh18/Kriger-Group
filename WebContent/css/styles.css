@@ -123,3 +123,9 @@ input[type="file"]{
 .pincode{
 	width:23%;
 }
+@media screen and (max-width : 320px) {
+.logo{
+	width:100%;
+}
+
+}
