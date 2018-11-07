@@ -11,7 +11,8 @@
 <%
 String fname=request.getParameter("fname");
 String lname=request.getParameter("lname");
-
+Employee e =new Employee();
+e.insertEmployee(fname, lname);
 %>
 </body>
 </html>
