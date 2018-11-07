@@ -4,6 +4,7 @@ public class Employee {
 	private  Connection con;
     private PreparedStatement ps;
     private ResultSet rs;
+    String sql;
     public Employee(){
     	try{
         Class.forName("com.mysql.jdbc.Driver"); 
@@ -13,4 +14,16 @@ public class Employee {
     	}catch(Exception se){
     		System.out.println(se);}
     	   }
+    //Insert data into the  table
+    public int insertEmployee(String name, String email){
+    	try{
+        sql="INSERT INTO employee_personel VALUES(?,?,?)";
+        ps=con.prepareStatement(sql);
+    	ps.executeQuery();
+    	}catch(SQLException se){
+    		System.out.println("Error in Insertion");
+    	}
+    	return 1;
+    	 }
+
 }
