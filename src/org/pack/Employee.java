@@ -15,10 +15,15 @@ public class Employee {
     		System.out.println(se);}
     	   }
     //Insert data into the  table
-    public int insertEmployee(String name, String email){
+    public int insertEmployee(String fname, String lname) throws Exception{
+    	int c;
     	try{
         sql="INSERT INTO employee_personel VALUES(?,?,?)";
         ps=con.prepareStatement(sql);
+        c=count()+1;
+        ps.setInt(1, c);
+        ps.setString(2,fname);
+        ps.setString(3,lname);
     	ps.executeQuery();
     	}catch(SQLException se){
     		System.out.println("Error in Insertion");
