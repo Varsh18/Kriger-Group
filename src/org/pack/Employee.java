@@ -25,5 +25,19 @@ public class Employee {
     	}
     	return 1;
     	 }
+     public int count() throws Exception {
+     try {
+
+    	 sql="select count(*) from employee_personel";
+    	 ps=con.prepareStatement(sql);
+     	ps.executeQuery();
+    	     while (rs.next()) {
+    	     return rs.getInt(1);
+    	     }
+    	} catch (Exception e) {
+    	System.out.println("Row count error");	
+    	}
+        return 0;
+    	}
 
 }
