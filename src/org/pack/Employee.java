@@ -75,7 +75,24 @@ public class Employee {
 		}
     	return 1;
     	 }
-    
+    public int insertVendor(String[] emp){
+    	java.sql.Date edate=null;
+        java.util.Date dateStr=null;
+   	SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+   	try {		
+   		dateStr= format.parse(emp[4]);
+	    edate = new java.sql.Date(dateStr.getTime());
+		} catch (ParseException e1) {
+			e1.printStackTrace();
+		} 
+    	try {
+			s.executeUpdate("INSERT INTO kriger.vendor_employee(id,cname,address,product,iso,end_date,duration) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"','"+edate+"','"+emp[5]+"')");
+		System.out.println("Vendor employee added");
+    	} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	return 1;
+    	 }
      public int count() throws Exception {
      try {
 
