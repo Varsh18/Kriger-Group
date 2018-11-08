@@ -93,6 +93,16 @@ public class Employee {
 		}
     	return 1;
     	 }
+    
+    public int insertBank(String[] emp){
+    	try {
+			s.executeUpdate("INSERT INTO kriger.bank(id,ac,ifsc,branch,name) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"')");
+			System.out.println("Bank details added");
+    	} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	return 1;
+    	 }
      public int count() throws Exception {
      try {
 
