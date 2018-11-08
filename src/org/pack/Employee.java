@@ -8,6 +8,7 @@ public class Employee {
     private Statement s;
     private ResultSet rs;
     String sql;
+    int c=0;
     public Employee(){
     	try{
         Class.forName("com.mysql.jdbc.Driver"); 
@@ -21,7 +22,6 @@ public class Employee {
     	   }
     //Insert data into the  table
     public int insertEmployee(String[] emp){
-    	int c=0;
     	java.sql.Date dob=null,jdate=null;
          java.util.Date		dateStr=null;
     	SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
@@ -45,6 +45,27 @@ public class Employee {
 		}
     	return c;
     	 }
+    
+    public int insertAddress(String[] emp){
+    	try {
+			s.executeUpdate("INSERT INTO kriger.current_address(id,address,suburban,state,pincode,email,mobile) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"','"+emp[4]+"','"+emp[5]+"')");
+		System.out.println("Current Address added");
+    	} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	return 1;
+    	 }
+    
+    public int insertPermanentAddress(String[] emp){
+    	try {
+			s.executeUpdate("INSERT INTO kriger.permanent_address(id,address,suburban,state,pincode,mobile) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"','"+emp[4]+"')");
+			System.out.println("Permanent Address added");
+    	} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	return 1;
+    	 }
+    
      public int count() throws Exception {
      try {
 
