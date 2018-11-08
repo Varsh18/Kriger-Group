@@ -8,7 +8,7 @@
     <link rel="stylesheet" media="screen" href="css/styles.css" type="text/css">
   </head>
   <body>
-  <form id="regForm" action="insert.jsp">
+  <form id="regForm" action="employee.jsp">
   <div id="header">
   <div class="head logo">
   <img src="images/logo.png"  alt="Kriger campus" width=150px height=150px/>
@@ -33,7 +33,7 @@
    Salutation:
       <input oninput="this.className = ''" id="salutation" >
     First Name:
-      <input placeholder="First name" oninput="this.className = ''" id="fname" name="fname">
+      <input placeholder="First name" oninput="this.className = ''" id="fname" name="name">
     Last Name:
       <input placeholder="Last name" oninput="this.className = ''" id="lname" name="lname">
     Mother's Name:
@@ -69,7 +69,7 @@
    <div class="address">
    <div class="box current">
     Current Address:<br/>
-     <textarea rows="5" cols="45" id="address" oninput="this.className = ''" ></textarea><br/>
+     <textarea rows="5" cols="45" id="address" name="address" oninput="this.className = ''" ></textarea><br/>
 </div>
 <div class="box place">
      Sub Urban:
@@ -98,7 +98,7 @@
    <div class="box current">
    <input type="checkbox" onclick="copyAddress()"  id="copy"  />Same as Current address<br/>
  Permanent Address:<br/>
-     <textarea rows="5" cols="45" id="paddress"oninput="this.className = ''" ></textarea><br/>
+     <textarea rows="5" cols="45" id="paddress" name="paddress"oninput="this.className = ''" ></textarea><br/>
 </div>
 <div class="box place">
      Sub Urban:
@@ -111,10 +111,6 @@
 <div class="box pincode">
    Pincode:
        <input placeholder="Pincode" maxlength="6" oninput="this.className = ''"  id="ppincode"name="ppincode">
-</div>
-<div class="box email">
-   Email Address:
-           <input placeholder="Email Address" id="pemail"  oninput="this.className = ''" name="pemail">
 </div>
 <div class="box mobile">
   

@@ -7,12 +7,13 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body style="Background-color:#CCC0FF">
 <%
-String fname=request.getParameter("fname");
+String name=request.getParameter("name");
 String lname=request.getParameter("lname");
-Employee e =new Employee();
-e.insertEmployee(fname, lname);
+
+Employee emp =new Employee();
+emp.insertEmployee(name,lname);
 %>
 </body>
 </html>
