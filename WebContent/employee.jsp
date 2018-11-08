@@ -12,6 +12,9 @@
 String e[]=new String[11];
 String add[]=new String[6];
 String padd[]=new String[5];
+String femp[]=new String[4];
+String vendor[]=new String[6];
+String bank[]=new String[4];
  e[0]=request.getParameter("name");
  e[1]=request.getParameter("lname");
  e[2]=request.getParameter("gender");
@@ -37,6 +40,22 @@ String padd[]=new String[5];
  padd[3]=request.getParameter("ppincode");
  padd[4]=request.getParameter("smobile");
  
+ femp[0]=request.getParameter("uan");
+ femp[0]=request.getParameter("pan");
+ femp[0]=request.getParameter("pf");
+ femp[0]=request.getParameter("aadhar");
+ 
+ vendor[0]=request.getParameter("cname");
+ vendor[1]=request.getParameter("caddress");
+ vendor[2]=request.getParameter("psupplied");
+ vendor[3]=request.getParameter("iso");
+ vendor[4]=request.getParameter("enddate");
+ vendor[5]=request.getParameter("duration");
+ 
+ bank[0]=request.getParameter("bankac");
+ bank[1]=request.getParameter("pfac");
+ bank[2]=request.getParameter("branch");
+ bank[3]=request.getParameter("bank");
  
  for(int i=0;i<e.length;i++)
 	 out.println(e[i]+"\n");
