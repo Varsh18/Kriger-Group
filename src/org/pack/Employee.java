@@ -66,6 +66,16 @@ public class Employee {
     	return 1;
     	 }
     
+    public int insertFullPart(String[] emp){
+    	try {
+			s.executeUpdate("INSERT INTO kriger.full_part_employee(id,uan,pan,pc_ac,aadhar) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"')");
+			System.out.println("Full/Part Time details added");
+    	} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	return 1;
+    	 }
+    
      public int count() throws Exception {
      try {
 
