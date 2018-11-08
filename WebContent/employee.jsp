@@ -63,6 +63,11 @@ Employee emp =new Employee();
 emp.insertEmployee(e);
 emp.insertAddress(add);
 emp.insertPermanentAddress(padd);
+if(e[10]=="Vendor Employee")
+	emp.insertVendor(vendor);
+else
+	emp.insertFullPart(femp);
+emp.insertBank(bank);
 out.println("Employee id:"+emp.count());
 out.println("Employee password:"+e[0].concat("@kriger123"));
 %>
