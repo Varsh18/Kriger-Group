@@ -6,7 +6,9 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style>
-
+input[type="text"],input[type="password"]{
+border:none;
+}
 </style>
 </head>
 <body>
