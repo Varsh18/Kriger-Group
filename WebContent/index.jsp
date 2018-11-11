@@ -8,6 +8,7 @@
 <style>
 input[type="text"],input[type="password"]{
 border:none;
+border-bottom:1px solid #ddd;
 }
 </style>
 </head>
