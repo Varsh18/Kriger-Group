@@ -5,8 +5,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+
+</style>
 </head>
 <body>
-
+<div id="container">
+<div id="motto">
+</div>
+<div id="login">
+</div>
+</div>
 </body>
 </html>
