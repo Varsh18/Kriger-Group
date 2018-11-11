@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@page import="java.io.InputStream" %>
+<%@page import="javax.servlet.http.Part" %>
 <%@ page import="org.pack.Employee" %>
 <!DOCTYPE html>
 <html>
@@ -41,9 +43,9 @@ String bank[]=new String[4];
  padd[4]=request.getParameter("smobile");
  
  femp[0]=request.getParameter("uan");
- femp[0]=request.getParameter("pan");
- femp[0]=request.getParameter("pf");
- femp[0]=request.getParameter("aadhar");
+ femp[1]=request.getParameter("pan");
+ femp[2]=request.getParameter("pf");
+ femp[3]=request.getParameter("aadhar");
  
  vendor[0]=request.getParameter("cname");
  vendor[1]=request.getParameter("caddress");
@@ -53,22 +55,33 @@ String bank[]=new String[4];
  vendor[5]=request.getParameter("duration");
  
  bank[0]=request.getParameter("bankac");
- bank[1]=request.getParameter("pfac");
+ bank[1]=request.getParameter("ifsc");
  bank[2]=request.getParameter("branch");
  bank[3]=request.getParameter("bank");
  
- for(int i=0;i<e.length;i++)
+/* for(int i=0;i<e.length;i++)
 	 out.println(e[i]+"\n");
+*/
+
 Employee emp =new Employee();
 emp.insertEmployee(e);
 emp.insertAddress(add);
 emp.insertPermanentAddress(padd);
-if(e[10]=="Vendor Employee")
+if(e[10].equals("Vendor Employee"))
 	emp.insertVendor(vendor);
 else
 	emp.insertFullPart(femp);
 emp.insertBank(bank);
-out.println("Employee id:"+emp.count());
+/*
+InputStream inputstream=null;
+Part file=request.getPart("photo");
+if(file!=null){
+	inputstream=file.getInputStream();
+	emp.insertPhoto(inputstream);
+}
+*/
+out.println("Employee id:"+emp.count()+"<br/>");
+out.println("Employee Name:"+e[0]+"<br/>");
 out.println("Employee password:"+e[0].concat("@kriger123"));
 %>
 </body>

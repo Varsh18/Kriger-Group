@@ -1,4 +1,5 @@
 package org.pack;
+import java.io.InputStream;
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -20,6 +21,22 @@ public class Employee {
     	}catch(Exception se){
     		System.out.println(se);}
     	   }
+    public int insertPhoto(InputStream is) {
+    	String sql="INSERT INTO ephoto(photo) VALUES(?,?)";
+    	PreparedStatement s;
+		try {
+			s = con.prepareStatement(sql);
+			s.setInt(1, c);
+	    	s.setBlob(3, is);
+	        s.executeUpdate();		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	
+    	return 1;
+    }
+    
+    
     //Insert data into the  table
     public int insertEmployee(String[] emp){
     	java.sql.Date dob=null,jdate=null;
@@ -47,8 +64,10 @@ public class Employee {
     	 }
     
     public int insertAddress(String[] emp){
+    	int pincode=Integer.parseInt(emp[3]);
+    	Long mobile=Long.valueOf(emp[5]);
     	try {
-			s.executeUpdate("INSERT INTO kriger.current_address(id,address,suburban,state,pincode,email,mobile) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"','"+emp[4]+"','"+emp[5]+"')");
+			s.executeUpdate("INSERT INTO kriger.current_address(id,address,suburban,state,pincode,email,mobile) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+pincode+"','"+emp[4]+"','"+mobile+"')");
 		System.out.println("Current Address added");
     	} catch (SQLException e) {
 			e.printStackTrace();
@@ -57,8 +76,10 @@ public class Employee {
     	 }
     
     public int insertPermanentAddress(String[] emp){
+    	int pincode=Integer.parseInt(emp[3]);
+    	Long mobile=Long.valueOf(emp[4]);
     	try {
-			s.executeUpdate("INSERT INTO kriger.permanent_address(id,address,suburban,state,pincode,mobile) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"','"+emp[4]+"')");
+			s.executeUpdate("INSERT INTO kriger.permanent_address(id,address,suburban,state,pincode,mobile) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+pincode+"','"+mobile+"')");
 			System.out.println("Permanent Address added");
     	} catch (SQLException e) {
 			e.printStackTrace();
@@ -67,8 +88,12 @@ public class Employee {
     	 }
     
     public int insertFullPart(String[] emp){
+    	Long uan=Long.valueOf(emp[0]);
+    	Long pan=Long.valueOf(emp[1]);
+    	Long pc=Long.valueOf(emp[2]);
+    	Long aadhar=Long.valueOf(emp[3]);
     	try {
-			s.executeUpdate("INSERT INTO kriger.full_part_employee(id,uan,pan,pc_ac,aadhar) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"')");
+			s.executeUpdate("INSERT INTO kriger.full_part_employee(id,uan,pan,pc_ac,aadhar) Values('"+c+"','"+uan+"','"+pan+"','"+pc+"','"+aadhar+"')");
 			System.out.println("Full/Part Time details added");
     	} catch (SQLException e) {
 			e.printStackTrace();
