@@ -17,6 +17,7 @@
 <h4>Login to your Account</h4>
 <input type="text" placeholder="User Name" name="name"/>
 <input type="password" placeholder="Password" name="password"/>
+<input type="submit" value="Login"/>
 </div>
 </div>
 </body>
