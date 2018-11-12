@@ -142,33 +142,21 @@ public class Employee {
     	}
         return 0;
     	}
-     public String checkLogin(String name,String password) {
+     public String checkLogin(int id,String password) {
     	 int row=0,r=0;
          try {
-	     sql="SELECT * FROM kriger.employee_personel WHERE name="+name+"AND password="+password+"";
-	     ps=con.prepareStatement(sql);
-	     	rs=ps.executeQuery();
+	     	rs=s.executeQuery("SELECT * FROM kriger.employee_personel WHERE id='"+id+"' AND password='"+password+"'");
 	    	     while (rs.next()) {
 	    	     row= rs.getRow();
 	    	     }
          if(row==0) {
-        	 sql="SELECT * FROM kriger.employee_personel WHERE name="+name;
-    	     ps=con.prepareStatement(sql);
-    	     	rs=ps.executeQuery();
+        	 rs=s.executeQuery("SELECT * FROM kriger.employee_personel WHERE id='"+id+"'");
     	    	     while (rs.next()) {
     	    	     r= rs.getRow();
     	    	     }
     	    	     if(r==0)
-    	    	    	 return "Invalid User";
-         }
-         if(row==0) {
-        	 sql="SELECT * FROM kriger.employee_personel WHERE password"+password;
-    	     ps=con.prepareStatement(sql);
-    	     	rs=ps.executeQuery();
-    	    	     while (rs.next()) {
-    	    	     r= rs.getRow();
-    	    	     }
-    	    	     if(r==0)
+    	    	    	 return "Invalid User ID";
+    	    	     else
     	    	    	 return "Invalid Password";
          }
          }
