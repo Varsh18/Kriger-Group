@@ -28,7 +28,8 @@ border-bottom:1px solid #ddd;
 </div>
 <%
 String name,password,status="";
-
+if(request.getParameter("name")!=null)
+	name=request.getParameter("name");
 %>
 </body>
 </html>
