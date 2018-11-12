@@ -17,6 +17,7 @@ border-bottom:1px solid #ddd;
 <body>
 <div id="container">
 <div id="motto">
+<img src="http://kriger.in/wp-content/uploads/resized/b1bb5ef050ba2c878136e4a336830ae8/WhatsApp-Image-2018-01-13-at-12.17.23-AM-2.jpg" alt="kriger"/>
 </div>
 <div id="login">
 <h4>Login to your Account</h4>
