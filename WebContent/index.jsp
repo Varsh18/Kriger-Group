@@ -26,5 +26,9 @@ border-bottom:1px solid #ddd;
 </form>
 </div>
 </div>
+<%
+String name,password,status="";
+
+%>
 </body>
 </html>
