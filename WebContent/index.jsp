@@ -30,6 +30,8 @@ border-bottom:1px solid #ddd;
 String name,password,status="";
 if(request.getParameter("name")!=null)
 	name=request.getParameter("name");
+if(request.getParameter("password")!=null)
+	password=request.getParameter("password");
 %>
 </body>
 </html>
