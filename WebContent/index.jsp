@@ -21,18 +21,25 @@ border-bottom:1px solid #ddd;
 <div id="login">
 <h4>Login to your Account</h4>
 <form action="" method="post">
-<input type="text" placeholder="User Name" name="name"/>
+<input type="text" placeholder="User ID" name="id"/>
 <input type="password" placeholder="Password" name="password"/>
 <input type="submit" value="Login"/>
 </form>
 </div>
 </div>
 <%
-String name,password,status="";
-if(request.getParameter("name")!=null)
-	name=request.getParameter("name");
+int id=0;
+String ids=null,password=null,status=null;
+if(request.getParameter("id")!=null)
+    ids=request.getParameter("id");
 if(request.getParameter("password")!=null)
 	password=request.getParameter("password");
+if(ids!=null && password!=null){
+	Employee e=new Employee();
+	id=Integer.parseInt(ids);
+	status=e.checkLogin(id, password);
+	out.println(status);
+}
 %>
 </body>
 </html>
