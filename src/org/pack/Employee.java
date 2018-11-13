@@ -144,6 +144,7 @@ public class Employee {
     	}
      public String checkLogin(int id,String password) {
     	 int row=0,r=0;
+    	 String Val="";
          try {
 	     	rs=s.executeQuery("SELECT * FROM kriger.employee_personel WHERE id='"+id+"' AND password='"+password+"'");
 	    	     while (rs.next()) {
@@ -163,7 +164,15 @@ public class Employee {
          catch(Exception e) {
 	        System.out.println(e);
          }
-    	 return "Login Success";
+         try {
+			rs=s.executeQuery("SELECT type FROM kriger.employee_personel WHERE id='"+id+"'");
+	         while (rs.next()) {
+	        	 Val = rs.getString ("type");  
+	    	 }
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	 return "Login Success"+Val;
      }
   /*   public static void main(String[] args) {
     	 Employee e=new Employee();
