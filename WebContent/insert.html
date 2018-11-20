@@ -193,6 +193,8 @@
   function showTab(n) {
     var x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
+    if(n==1)
+    	x[n+1].style.display = "block";
     if (n == 0) {
     document.getElementById("prevBtn").style.display = "none";
   }else {
@@ -221,10 +223,10 @@
         	  document.getElementsByClassName('full')[0].style.display="block";
         	  document.getElementsByClassName("vendor")[0].style.display="block";
           }
-          if (currentTab >= x.length) {
-            document.getElementById("regForm").submit();
+          if (currentTab >= 2) {
           return false;
       }
+       document.getElementById("regForm").submit();
        showTab(currentTab);
   }
   function validateForm() {
