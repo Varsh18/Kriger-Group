@@ -121,7 +121,7 @@ String ids=null,password=null,status=""; %>
 </div>
 <h4>Login to your Account</h4>
 <form action="index.jsp" method="post">
-<input type="text" placeholder="User ID" name="id" maxLength="8"/>
+<input type="text" placeholder="User ID" name="id" maxLength="8 "/>
 <input type="password" placeholder="Password" name="password" maxLength="35"/>
 <input type="submit" value="Login" id="submit" name="submit"/>
 </form>

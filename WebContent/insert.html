@@ -8,7 +8,7 @@
     <link rel="stylesheet" media="screen" href="css/styles.css" type="text/css">
   </head>
   <body>
-  <form id="regForm" action="employee.jsp">
+  <form id="regForm" action="insertPhoto" enctype='multipart/form-data' method="post">
   <div id="header">
   <div class="head logo">
   <img src="images/logo.png"  alt="Kriger campus" width=150px height=150px/>
@@ -20,7 +20,7 @@
   </div>
  <div id="pass" class="head">
 <img id="photo"width=145px height=195px/><br/>
-<input type="file"  name="photo" accept="image/*" onchange="loadFile(event)">
+<input type="file"  name="photo" accept="image/*" size="50" onchange="loadFile(event)">
 </div>
   </div> 
   <br/>

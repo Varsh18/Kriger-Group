@@ -21,18 +21,21 @@ public class Employee {
     	}catch(Exception se){
     		System.out.println(se);}
     	   }
-    public int insertPhoto(InputStream is) {
-    	String sql="INSERT INTO ephoto(photo) VALUES(?,?)";
+    public int insertPhoto(String is) {
+    	String sql="INSERT INTO kriger.ephoto(id,photo) VALUES(?,?)";
     	PreparedStatement s;
+    	System.out.println("Insert photo function");
 		try {
 			s = con.prepareStatement(sql);
 			s.setInt(1, c);
-	    	s.setBlob(3, is);
-	        s.executeUpdate();		
+			s.setString(2, is);
+	        if(s.executeUpdate()>0)	
+	        System.out.println("Employee Photo Inserted");
+	        else
+	        System.out.println("Not Inserted");	
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-    	
     	return 1;
     }
     
@@ -57,7 +60,8 @@ public class Employee {
 		}
     	try {
 			s.executeUpdate("INSERT INTO kriger.employee_personel(id,password,name,lname,gender,fname,mname,dob,jdate,role,rhead,bloodgroup,type) Values('"+c+"','"+emp[0].concat("@kriger123")+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"','"+emp[4]+"','"+dob+"','"+jdate+"','"+emp[7]+"','"+emp[8]+"','"+emp[9]+"','"+emp[10]+"')");
-		} catch (SQLException e) {
+		System.out.println("Personal details added");
+    	} catch (SQLException e) {
 			e.printStackTrace();
 		}
     	return c;
@@ -131,7 +135,7 @@ public class Employee {
      public int count() throws Exception {
      try {
 
-    	 sql="select count(*) from kriger.employee_personel";
+    	 sql="select MAX(id) from kriger.employee_personel";
     	 ps=con.prepareStatement(sql);
      	rs=ps.executeQuery();
     	     while (rs.next()) {

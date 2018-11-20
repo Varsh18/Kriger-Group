@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <display-name>servletFileUpload</display-name>
+    <welcome-file-list>
+        <welcome-file>employee.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <description></description>
+        <display-name>insertPhoto</display-name>
+        <servlet-name>insertPhotot</servlet-name>
+    <servlet-class>insertPhoto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>insertPhoto</servlet-name>
+        <url-pattern>/uploadServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

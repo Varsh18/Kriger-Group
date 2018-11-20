@@ -1,8 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@page import="java.io.InputStream" %>
-<%@page import="javax.servlet.http.Part" %>
+<%@page import="javax.servlet.annotation.MultipartConfig"%>
+<%@page import="org.apache.commons.fileupload.servlet.ServletFileUpload" %>
+<%@page import="org.apache.commons.fileupload.*" %>
+<%@page import="org.apache.commons.fileupload.disk.DiskFileItemFactory" %>
+<%@page import="java.io.*" %>
+<%@page import="javax.servlet.http.*" %>
+<%@page import="javax.servlet.*" %>
 <%@ page import="org.pack.Employee" %>
+<%@page import="java.util.*" %>
+<%@page import="java.util.List" %>
+<%@page import="java.io.File" %>
+<%@page import="java.util.Iterator" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,9 +89,49 @@ if(file!=null){
 	emp.insertPhoto(inputstream);
 }
 */
+String ImageFile="",itemName="";
+boolean isMultipart=ServletFileUpload.isMultipartContent(request);
+if(!isMultipart){
+	
+}
+else{
+FileItemFactory factory=new DiskFileItemFactory();
+ServletFileUpload upload=new ServletFileUpload(factory);
+List items=null;
+try{
+	items=upload.parseRequest(request);
+}
+catch(FileUploadException esp){
+	esp.getMessage();
+}
+Iterator it=items.iterator();
+while(it.hasNext()){
+	FileItem item=(FileItem)it.next();
+	if(item.isFormField())
+	{
+	String name=item.getFieldName();
+	String value=item.getString();
+	if(name.equals("ImageFile"))
+		ImageFile=value;
+	}
+	else{
+		try{
+			itemName=item.getName();
+			File savedFile=new File(config.getServletContext().getRealPath("/")+"Example\\image-folder\\"+itemName);
+			item.write(savedFile);
+		}
+		catch(Exception es){
+			out.println(es.getMessage());
+		}
+	}
+}
+}
+emp.insertPhoto(itemName);
 out.println("Employee id:"+emp.count()+"<br/>");
+out.println("Employee password:"+e[0].concat("@kriger123")+"<br/>");
 out.println("Employee Name:"+e[0]+"<br/>");
-out.println("Employee password:"+e[0].concat("@kriger123"));
+out.println("Employee Last Name:"+e[1]+"<br/>");
+out.println("Type of Employee:"+e[10]+"<br/>");
 %>
 </body>
 </html>
