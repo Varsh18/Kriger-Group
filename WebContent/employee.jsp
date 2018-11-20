@@ -73,14 +73,18 @@ String bank[]=new String[4];
 */
 
 Employee emp =new Employee();
+if(e[0] != null){
 emp.insertEmployee(e);
 emp.insertAddress(add);
 emp.insertPermanentAddress(padd);
+}
+if(bank[0]!=null){
 if(e[10].equals("Vendor Employee"))
 	emp.insertVendor(vendor);
 else
 	emp.insertFullPart(femp);
 emp.insertBank(bank);
+}
 /*
 InputStream inputstream=null;
 Part file=request.getPart("photo");
