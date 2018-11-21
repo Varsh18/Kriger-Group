@@ -36,6 +36,11 @@ input {
 	padding:1%;
 	  font-size: 17px;
 }
+#status{
+	width:11%;
+	padding:1%;
+	  font-size: 17px;
+}
 textarea{
     font-size: 17px;
 }
@@ -148,7 +153,7 @@ input[type="file"]{
 	margin-left:15%;
     margin-right:15%;
 }
-#salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode,#ppincode{
+#salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode,#ppincode,#status{
 	width:100%;
 }
 }
