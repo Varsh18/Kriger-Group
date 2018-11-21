@@ -104,6 +104,9 @@ input[type="file"]{
 #fname,#lname,#role,#rhead{
 	width:28%;
 }
+#mname{
+	20%;
+}
 #salutation{
 	width:15%;
 }
