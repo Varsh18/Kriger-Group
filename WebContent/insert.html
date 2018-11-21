@@ -157,16 +157,6 @@
   }
    return valid;
   }
-
-  function date(name,date){
-	  if(date.length==2 || date.length==5)
-	  document.getElementsByName(name)[0].value=date+'-';
-	  }
-  function time(name,time){
-	  if(time.length==2)
-	  document.getElementsByName(name)[0].value=time+':';
-	  }
-  
   var loadFile = function(event) {
 	    var photo = document.getElementById('photo');
 	    photo.src = URL.createObjectURL(event.target.files[0]);
