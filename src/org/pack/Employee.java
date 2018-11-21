@@ -1,8 +1,12 @@
 package org.pack;
 import java.io.InputStream;
 import java.sql.*;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+import com.mysql.jdbc.StringUtils;
 public class Employee {
 	private  Connection con;
     private PreparedStatement ps;
@@ -39,9 +43,17 @@ public class Employee {
     	return 1;
     }
     
-    
+  public String generate(int c) {
+	  String eid="KC";
+	  DateFormat f=new SimpleDateFormat("YYYY");
+	  String year=f.format(Calendar.getInstance().getTime());
+	  String l=String.format("%03d", c);
+	  eid=eid+year+l;
+	  return eid;
+  }
     //Insert data into the  table
-    public int insertEmployee(String[] emp){
+    public String insertEmployee(String[] emp){
+    	String eid;
     	java.sql.Date dob=null,jdate=null;
          java.util.Date		dateStr=null;
          System.out.println(emp[5]+"\n"+emp[6]+"\n"+emp[2]);
@@ -54,18 +66,21 @@ public class Employee {
 		} catch (ParseException e1) {
 			e1.printStackTrace();
 		} 
+    	
     	try {
 			c=count()+1;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+    	eid=generate(c);
+    	
     	try {
-			s.executeUpdate("INSERT INTO kriger.employee_personel(id,password,name,lname,gender,fname,mname,dob,jdate,role,rhead,bloodgroup,type) Values('"+c+"','"+emp[0].concat("@kriger123")+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"','"+emp[4]+"','"+dob+"','"+jdate+"','"+emp[7]+"','"+emp[8]+"','"+emp[9]+"','"+emp[10]+"')");
+			s.executeUpdate("INSERT INTO kriger.employee_personel(id,eid,password,name,lname,gender,fname,mname,dob,jdate,role,rhead,bloodgroup,type) Values('"+c+"','"+eid+"','"+emp[0].concat("@kriger123")+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"','"+emp[4]+"','"+dob+"','"+jdate+"','"+emp[7]+"','"+emp[8]+"','"+emp[9]+"','"+emp[10]+"')");
 		System.out.println("Personal details added");
     	} catch (SQLException e) {
 			e.printStackTrace();
 		}
-    	return c;
+    	return eid;
     	 }
     
     public int insertAddress(String[] emp){

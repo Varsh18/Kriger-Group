@@ -47,16 +47,16 @@ String padd[]=new String[5];
  padd[2]=request.getParameter("pstate");
  padd[3]=request.getParameter("ppincode");
  padd[4]=request.getParameter("smobile");
-
+ String s=null;
 Employee emp =new Employee();
 if(e[0]!=null){
-emp.insertEmployee(e);
+s=emp.insertEmployee(e);
 
 emp.insertAddress(add);
 emp.insertPermanentAddress(padd);
 }
 
-out.println("Employee id:"+emp.count()+"<br/>");
+out.println("Employee id:"+s+"<br/>");
 out.println("Employee password:"+e[0].concat("@kriger123")+"<br/>");
 out.println("Employee Name:"+e[0]+"<br/>");
 out.println("Employee Last Name:"+e[1]+"<br/>");
