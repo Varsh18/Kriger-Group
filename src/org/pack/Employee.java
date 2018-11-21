@@ -44,6 +44,7 @@ public class Employee {
     public int insertEmployee(String[] emp){
     	java.sql.Date dob=null,jdate=null;
          java.util.Date		dateStr=null;
+         System.out.println(emp[5]+"\n"+emp[6]+"\n"+emp[2]);
     	SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
     	try {		
     		dateStr= format.parse(emp[5]);

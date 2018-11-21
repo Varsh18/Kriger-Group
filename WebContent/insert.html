@@ -8,7 +8,7 @@
     <link rel="stylesheet" media="screen" href="css/styles.css" type="text/css">
   </head>
   <body>
-  <form id="regForm" action="insertPhoto" enctype='multipart/form-data' method="post">
+  <form id="regForm" action="employee.jsp"  method="post">
   <div id="header">
   <div class="head logo">
   <img src="images/logo.png"  alt="Kriger campus" width=150px height=150px/>
@@ -119,130 +119,30 @@
 
 </div>
 </div>
-
   </div>
-  <div class="tab">
-  <div class="full">
-  <h1>Full Time/Part Time Employee</h1>
-  UAN:
-  <input placeholder="UAN" id="uan" oninput="this.className=''" name="uan"/>
-  PAN:
-  <input placeholder="PAN" id="pan" oninput="this.className=''" name="pan"/>
-  PF A/C:
-  <input placeholder="PF A/C" id="pf" oninput="this.className=''" name="pf"/>
-   Aadhar Card:
-           <input placeholder="Aadhar card" id="aadhar" oninput="this.className = ''" name="aadhar">
-  </div>
-  <div class="vendor">
-  <h1>Vendor Employee</h1>
-    Company Name:
-      <input placeholder="Company Name" id="cname" oninput="this.className = ''" name="cname">
-    Company Address:
-      <textarea rows="5" name="caddress" id="caddress" oninput="this.className = ''" ></textarea>
-    Product/Services Supplied:
-        <textarea rows="5" name="psupplied" id="psupplied" oninput="this.className = ''" ></textarea>
-    Is company ISO Certified
-        <input type="radio" name="iso" value="yes" checked> Yes
-        <input type="radio" name="iso" value="no"> No<br/>
-    End date:
-          <input placeholder="End Date" id="enddate" onkeypress="date(this.name,this.value)" oninput="this.className = ''" name="enddate">
-    Duration:
-          <input placeholder="Duration" id="duration"oninput="this.className = ''" name="duration">
-
-    </div>
-    </div>
-  <div class="tab">
-  <h1>Bank Details</h1>
-  Bank A/C:
-  <input type="text" name="bankac" id="bankac" placeholder="Bank A/C " oninput="this.className=''">
-  IFSC Code:
-  <input type="text" placeholder="IFSC Code" id="ifsc" name="ifsc" oninput="this.className=''">
-  Branch:
-  <input type="text" name="branch" id="branch" placeholder="Branch" oninput="this.className=''">
-  Bank Name:
-  <select name="bank" id="bank">
-        <option value="null"></option>
-        <option value="Allahabad Bank">Allahabad Bank</option>
-        <option value="Andhra Bank">Andhra Bank</option>
-        <option value="Bank of Baroda">Bank of Baroda</option>
-        <option value="Bank of India">Bank of India</option>
-        <option value="Bank of Maharastra">Bank of Maharastra</option>
-        <option value="Bharatya Mallika Bank">Bharatya Mallika Bank</option>
-        <option value="Canara Bank">Canara Bank</option>
-        <option value="Central Bank of India">Central Bank of India</option>
-        <option value="Corporation Bank">Corporation Bank</option>
-        <option value="Dena Bank">Dena Bank</option>
-        <option value="IDBI Bank">IDBI Bank</option>
-        <option value="Indian Bank">Indian Bank</option>
-      </select>
-  </div>
-  <div style="overflow:auto;">
+    <div style="overflow:auto;">
     <div>
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button  style="float:right;" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+
+      <button  style="float:right;" type="button" id="nextBtn" onclick="nextPrev()">Submit</button>
     </div>
   </div>
   <div style="text-align:center;margin-top:40px;">
-  <span class="step"></span>
-  <span class="step"></span>
 </div>
   </form>
   <script>
-  var currentTab = 0;
-  showTab(currentTab);
-  function showTab(n) {
-    var x = document.getElementsByClassName("tab");
-    x[n].style.display = "block";
-    if(n==1)
-    	x[n+1].style.display = "block";
-    if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  }else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-    document.getElementById("nextBtn").innerHTML = "Submit";
-
-    fixStepIndicator(n);
-  }
-  function nextPrev(n) {
-      var x = document.getElementsByClassName("tab");
-      var check=document.getElementsByName('type')[0].value;
-       if (n == 1 && !validateForm()) return false;
-        x[currentTab].style.display = "none";
-
-        //increase or decrease current tab by one
-          currentTab = currentTab + n;
-          if(currentTab == 1)
-          {
-        	 if(check == 'Vendor Employee')
-        		document.getElementsByClassName('full')[0].style.display="none";
-        	else
-        		document.getElementsByClassName("vendor")[0].style.display="none";
-          }
-          else{
-        	  document.getElementsByClassName('full')[0].style.display="block";
-        	  document.getElementsByClassName("vendor")[0].style.display="block";
-          }
-          if (currentTab >= 2) {
-          return false;
-      }
+  function nextPrev() {
+       if (!validateForm()) return false;
+  
        document.getElementById("regForm").submit();
-       showTab(currentTab);
+      
   }
   function validateForm() {
       var x, y,z, i=0, j,valid = true;
       x = document.getElementsByClassName("tab");
-      y = x[currentTab].getElementsByTagName("input");
-      z = x[currentTab].getElementsByTagName("textarea");
+      y = x[0].getElementsByTagName("input");
+      z = x[0].getElementsByTagName("textarea");
       j=y.length;
       k=z.length;
-      if(currentTab == 1){
-    	var check=document.getElementsByName('type')[0].value;
-    	if(check == 'Vendor Employee')
-      		i=4;
-      	else
-      		j=4,k=0;
-      }
       for (; i < j; i++) {
         if (y[i].value == "") {
           y[i].className += " invalid";
@@ -255,18 +155,9 @@
               valid = false;
         }
   }
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
    return valid;
   }
-  function fixStepIndicator(n) {
-    var i, x = document.getElementsByClassName("step");
-    for (i = 0; i < x.length; i++) {
-      x[i].className = x[i].className.replace(" active", "");
-    }
-    x[n].className += " active";
-}
+
   function date(name,date){
 	  if(date.length==2 || date.length==5)
 	  document.getElementsByName(name)[0].value=date+'-';
@@ -285,7 +176,6 @@
 		  document.getElementById('psurban').value= document.getElementById('surban').value;
 		  document.getElementById('pstate').value= document.getElementById('state').value;
 		  document.getElementById('ppincode').value= document.getElementById('pincode').value;
-		  document.getElementById('pemail').value= document.getElementById('email').value;
 		  document.getElementById('smobile').value= document.getElementById('pmobile').value;
 	  }
   </script>

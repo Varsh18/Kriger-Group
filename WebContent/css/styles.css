@@ -67,9 +67,7 @@ button {
 .step.finish {
   background-color:rgba(0, 184, 148,1.0);
 }
-.tab {
-  display: none;
-}
+
 #prevBtn {
   background-color:rgba(253, 121, 168,0.6);
 }
