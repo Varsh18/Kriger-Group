@@ -18,7 +18,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body style="Background-color:#CCC0FF">
+<body>
 <%
 String e[]=new String[11];
 String add[]=new String[6];
