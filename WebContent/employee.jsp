@@ -115,6 +115,11 @@ emp.insertPermanentAddress(padd);
  <td><% out.println(e[0]);%></td>
  </tr>
    <tr>
+    <tr>
+ <td>Middle Name</td>
+ <td><% out.println(e[12]);%></td>
+ </tr>
+   <tr>
  <td>Last Name</td>
  <td><% out.println(e[1]);%></td>
  </tr>
