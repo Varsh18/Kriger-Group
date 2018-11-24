@@ -17,6 +17,24 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+table {
+    border-collapse: collapse;
+     width: 100%;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+th {
+    height: 50px;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+</style>
 </head>
 <body>
 <%
