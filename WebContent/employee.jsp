@@ -74,6 +74,13 @@ emp.insertAddress(add);
 emp.insertPermanentAddress(padd);
 }
 %>
+<div class="header">
+<img width="200" height="200" src="http://kriger.in/wp-content/uploads/2018/05/Screen-Shot-2018-05-24-at-12.59.30-AM.png" alt="logo"/>
+<div id="title">
+<h1>Kriger 	Campus</h1>
+<h2>India's Education Network</h2>
+</div>
+</div>
 <table>
  <tr>
  <td>Employee id</td>
