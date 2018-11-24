@@ -117,14 +117,6 @@ input[type="file"]{
 .pincode{
 	width:23%;
 }
-#bank{
-	width:100%;
-    padding:1%;
-	font-size: 17px;
-}
-.vendor,#uan,#pan,#pf,#aadhar,#cname,#caddress,#psupplied,#enddate,#duration,#bankac,#ifsc,#branch{
-	width:100%;
-}
 @media screen and (max-width : 320px) {
 .logo{
 	width:100%;
