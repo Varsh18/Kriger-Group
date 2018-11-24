@@ -56,5 +56,27 @@ emp.insertAddress(add);
 emp.insertPermanentAddress(padd);
 }
 %>
+<table>
+ <tr>
+ <td>Employee id</td>
+ <td><%out.println(s); %></td>
+ </tr>
+  <tr>
+ <td>Employee Password</td>
+ <td><% out.println(e[0].concat("@kriger123"));%></td>
+ </tr>
+   <tr>
+ <td>First Name</td>
+ <td><% out.println(e[0]);%></td>
+ </tr>
+   <tr>
+ <td>Last Name</td>
+ <td><% out.println(e[1]);%></td>
+ </tr>
+    <tr>
+ <td>Type of employee</td>
+ <td><% out.println(e[10]);%></td>
+ </tr>
+  </table>
 </body>
 </html>
