@@ -42,7 +42,7 @@ select{
 #status{
 	padding:1%;
 	font-size: 17px;
-	float:right;
+	margin-left:4em;
 }
 textarea{
     font-size: 17px;
