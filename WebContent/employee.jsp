@@ -117,7 +117,7 @@ emp.insertPermanentAddress(padd);
    <tr>
     <tr>
  <td>Middle Name</td>
- <td><% out.println(e[12]);%></td>
+ <td><% out.println(e[11]);%></td>
  </tr>
    <tr>
  <td>Last Name</td>
