@@ -38,7 +38,7 @@ String padd[]=new String[5];
  add[0]=request.getParameter("address");
  add[1]=request.getParameter("surban");
  add[2]=request.getParameter("state");
- add[3]=request.getParameter("pincode");
+ add[3]=request.getParameter("pincode"); 
  add[4]=request.getParameter("email");
  add[5]=request.getParameter("pmobile");
  
@@ -55,12 +55,6 @@ s=emp.insertEmployee(e);
 emp.insertAddress(add);
 emp.insertPermanentAddress(padd);
 }
-
-out.println("Employee id:"+s+"<br/>");
-out.println("Employee password:"+e[0].concat("@kriger123")+"<br/>");
-out.println("Employee Name:"+e[0]+"<br/>");
-out.println("Employee Last Name:"+e[1]+"<br/>");
-out.println("Type of Employee:"+e[10]+"<br/>");
 %>
 </body>
 </html>
