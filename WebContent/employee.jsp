@@ -42,7 +42,7 @@ table {
 th, td {
     border-bottom: 1px solid #ddd;
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(odd) {background-color: #f2f2f2;}
 th {
     height: 50px;
 }
@@ -115,7 +115,6 @@ emp.insertPermanentAddress(padd);
  <td><% out.println(e[0]);%></td>
  </tr>
    <tr>
-    <tr>
  <td>Middle Name</td>
  <td><% out.println(e[11]);%></td>
  </tr>
