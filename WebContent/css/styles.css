@@ -60,22 +60,6 @@ button {
   font-family: Raleway;
   cursor: pointer;
 }
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color:rgba(214, 48, 49,1.0);
-  border: none;
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5;
-}
-.step.active {
-  opacity: 1;
-}
-.step.finish {
-  background-color:rgba(0, 184, 148,1.0);
-}
 
 #prevBtn {
   background-color:rgba(253, 121, 168,0.6);
