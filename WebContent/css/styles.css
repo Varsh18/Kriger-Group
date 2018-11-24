@@ -31,6 +31,9 @@ input {
   font-family: Raleway;
   border: 1px solid #aaaaaa;
 }
+#fname,#lname,#middlename{
+	margin-right:1.5em;
+}
 #employee{
 	width:50%;
 	padding:1%;
@@ -106,7 +109,7 @@ input[type="file"]{
 	margin-top:-10%;
 	margin-left:5%;
 }
-#fname,#lname,#role,#rhead{
+#role,#rhead{
 	width:30%;
 }
 #mname{
