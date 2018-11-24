@@ -69,6 +69,7 @@ String padd[]=new String[5];
  e[9]=request.getParameter("bloodgroup");
  e[10]=request.getParameter("type");
  e[11]=request.getParameter("middlename");
+ e[12]=request.getParameter("status");
  
  add[0]=request.getParameter("address");
  add[1]=request.getParameter("surban");
