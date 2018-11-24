@@ -18,6 +18,22 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style>
+h1{
+  padding-left:1em;
+  color: rgba(142, 68, 173,1.0);
+}
+h2{
+	color:#00b894;
+}
+.header{
+display:flex;
+flex-wrap:wrap;
+}
+#logo{
+width:40%;}
+#title{
+width:60%;
+}
 table {
     border-collapse: collapse;
      width: 100%;
@@ -75,7 +91,9 @@ emp.insertPermanentAddress(padd);
 }
 %>
 <div class="header">
+<div id="logo">
 <img width="200" height="200" src="http://kriger.in/wp-content/uploads/2018/05/Screen-Shot-2018-05-24-at-12.59.30-AM.png" alt="logo"/>
+</div>
 <div id="title">
 <h1>Kriger 	Campus</h1>
 <h2>India's Education Network</h2>
