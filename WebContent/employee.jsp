@@ -54,7 +54,7 @@ th, td {
 </head>
 <body>
 <%
-String e[]=new String[11];
+String e[]=new String[13];
 String add[]=new String[6];
 String padd[]=new String[5];
  e[0]=request.getParameter("name");
