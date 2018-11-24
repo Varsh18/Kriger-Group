@@ -112,10 +112,10 @@ input[type="file"]{
 	width:50%;
 }
 #pincode,#ppincode{
-	width:40%;
+	width:50%;
 }
 .pincode{
-	width:23%;
+	width:20%;
 }
 @media screen and (max-width : 320px) {
 .logo{
