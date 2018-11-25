@@ -98,8 +98,8 @@ display:none;}
 </style>
 </head>
 <body>
-<%int id=0;
-String ids=null,password=null,status=""; %>
+<%
+String id=null,password=null,status=""; %>
 <div id="container">
 <div id="motto">
 <div id="logo">
@@ -134,12 +134,11 @@ else if(request.getParameter("password")=="")
 	status="Please Enter your password";
 else{
 if(request.getParameter("id")!="")
-    ids=request.getParameter("id");
+    id=request.getParameter("id");
 if(request.getParameter("password")!="")
 	password=request.getParameter("password");
-if(ids!=null && password!=""){
+if(id!=null && password!=""){
 	Employee e=new Employee();
-	id=Integer.parseInt(ids);
 	status=e.checkLogin(id, password);
 }	
 }

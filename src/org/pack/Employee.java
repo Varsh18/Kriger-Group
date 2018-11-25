@@ -161,16 +161,16 @@ public class Employee {
     	}
         return 0;
     	}
-     public String checkLogin(int id,String password) {
+     public String checkLogin(String id,String password) {
     	 int row=0,r=0;
     	 String Val="";
          try {
-	     	rs=s.executeQuery("SELECT * FROM kriger.employee_personel WHERE id='"+id+"' AND password='"+password+"'");
+	     	rs=s.executeQuery("SELECT * FROM kriger.employee_personel WHERE email='"+id+"' AND password='"+password+"'");
 	    	     while (rs.next()) {
 	    	     row= rs.getRow();
 	    	     }
          if(row==0) {
-        	 rs=s.executeQuery("SELECT * FROM kriger.employee_personel WHERE id='"+id+"'");
+        	 rs=s.executeQuery("SELECT * FROM kriger.employee_personel WHERE email='"+id+"'");
     	    	     while (rs.next()) {
     	    	     r= rs.getRow();
     	    	     }
@@ -184,7 +184,7 @@ public class Employee {
 	        System.out.println(e);
          }
          try {
-			rs=s.executeQuery("SELECT type FROM kriger.employee_personel WHERE id='"+id+"'");
+			rs=s.executeQuery("SELECT type FROM kriger.employee_personel WHERE email='"+id+"'");
 	         while (rs.next()) {
 	        	 Val = rs.getString ("type");  
 	    	 }
