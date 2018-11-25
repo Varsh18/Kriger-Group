@@ -74,7 +74,7 @@ public class Employee {
     	eid=generate(c);
     	
     	try {
-			s.executeUpdate("INSERT INTO kriger.employee_personel(id,eid,password,name,middlename,lname,gender,fname,mname,dob,jdate,role,rhead,bloodgroup,type,status) Values('"+c+"','"+eid+"','"+emp[0].concat("@kriger123")+"','"+emp[0]+"','"+emp[11]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"','"+emp[4]+"','"+dob+"','"+jdate+"','"+emp[7]+"','"+emp[8]+"','"+emp[9]+"','"+emp[10]+"','"+emp[12]+"')");
+			s.executeUpdate("INSERT INTO kriger.employee_personel(id,eid,email,password,name,middlename,lname,gender,fname,mname,dob,jdate,role,rhead,bloodgroup,type,status) Values('"+c+"','"+eid+"','"+emp[4]+"','"+emp[0].concat("@kriger123")+"','"+emp[0]+"','"+emp[11]+"','"+emp[1]+"','"+emp[2]+"','"+emp[3]+"','"+emp[4]+"','"+dob+"','"+jdate+"','"+emp[7]+"','"+emp[8]+"','"+emp[9]+"','"+emp[10]+"','"+emp[12]+"')");
 		System.out.println("Personal details added");
     	} catch (SQLException e) {
 			e.printStackTrace();
@@ -86,7 +86,7 @@ public class Employee {
     	int pincode=Integer.parseInt(emp[3]);
     	Long mobile=Long.valueOf(emp[5]);
     	try {
-			s.executeUpdate("INSERT INTO kriger.current_address(id,address,suburban,state,pincode,email,mobile) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+pincode+"','"+emp[4]+"','"+mobile+"')");
+			s.executeUpdate("INSERT INTO kriger.current_address(id,address,suburban,state,pincode,mobile) Values('"+c+"','"+emp[0]+"','"+emp[1]+"','"+emp[2]+"','"+pincode+"','"+mobile+"')");
 		System.out.println("Current Address added");
     	} catch (SQLException e) {
 			e.printStackTrace();
