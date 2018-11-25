@@ -86,7 +86,7 @@ String padd[]=new String[5];
  String s=null;
 Employee emp =new Employee();
 if(e[0]!=null){
-s=emp.insertEmployee(e);
+s=emp.insertEmployee(e,add[4]);
 
 emp.insertAddress(add);
 emp.insertPermanentAddress(padd);
