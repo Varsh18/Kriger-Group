@@ -126,6 +126,10 @@ emp.insertPermanentAddress(padd);
  <td>Type of employee</td>
  <td><% out.println(e[10]);%></td>
  </tr>
+     <tr>
+ <td>Email ID</td>
+ <td><% out.println(add[4]);%></td>
+ </tr>
   </table>
 </body>
 </html>
