@@ -28,8 +28,12 @@
 .place input[type="text"],.pincode input[type="text"],.mobile input[type="text"]{
     width: 250%;
 }
-#select,#radio{
+#radio{
 	width:50%;
+}
+#select{
+	width:30%;
+	padding-left:1.5em;
 }
 body {
   background-color: #f1f1f1;
@@ -183,3 +187,18 @@ textarea {
 	width:100%;
 }
 	}
+@media screen and (min-width:980px) and (max-width:1100px){
+	.field{
+	width:50%;
+	}
+	.place input[type="text"]{
+	width: 200%;
+	} 
+	.pincode input[type="text"], .mobile input[type="text"] {
+    width: 160%;
+}
+#select{
+	width:30%;
+	padding-left:1.5em;
+}
+}
