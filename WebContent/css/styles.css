@@ -101,7 +101,9 @@ input.invalid ,.invalid{
 .logo{
 	width:20%;
 }
-
+ .current .field{
+	width:50%;
+}
 #psurban{
 	margin-top:15%;
 }
@@ -112,6 +114,7 @@ input[type="file"]{
 }
 .current, .place{
 	width:50%;
+	margin-right:0px;
 }
 .address{
 	display:flex;
