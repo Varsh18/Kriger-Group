@@ -26,37 +26,37 @@
   <br/>
   <hr/>
   <div class="tab">
-     <div class="field">
+     <div id="radio">
       <span>Gender:</span>
      <input type="radio" name="gender" value="male" checked> Male
      <input type="radio" name="gender" value="female"> Female
      <input type="radio" name="gender" value="other"> Other
      </div>
-    <div class="field">
+    <div id="select">
     <select name="status" id="status">
     <option value="active">Active</option>
     <option value="inactive">In Active</option>
-    </select><br/>
+    </select>
      </div>
      <div class="field">
     <span>First Name:</span>
-      <input placeholder="First name" oninput="this.className = ''" id="fname" name="name">
+      <input placeholder="First name" oninput="this.className = ''" id="fname" name="name" type="text">
      </div>
      <div class="field">
     <span>Middle Name:</span>
-      <input placeholder="Middle name" oninput="this.className = ''" id="middlename" name="middlename">
+      <input placeholder="Middle name" oninput="this.className = ''" id="middlename" name="middlename" type="text">
       </div>
       <div class="field">
     <span>Last Name:</span>
-      <input placeholder="Last name" oninput="this.className = ''" id="lname" name="lname">
+      <input placeholder="Last name" oninput="this.className = ''" id="lname" name="lname" type="text">
       </div>
       <div class="field">
     <span>Mother's Name:</span>
-      <input placeholder="Mother's name" oninput="this.className = ''" id="mname" name="mname">
+      <input placeholder="Mother's name" oninput="this.className = ''" id="mname" name="mname" type="text">
       </div>
       <div class="field">
     <span>Father's Name:</span>
-      <input placeholder="Father's name" oninput="this.className = ''" id="fname" name="fname">
+      <input placeholder="Father's name" oninput="this.className = ''" id="fname" name="fname" type="text">
       </div>
      <div class="field">
      <span>Date of Birth:</span>
@@ -68,15 +68,15 @@
     </div>
     <div class="field">
      <span>Role:</span>
-      <input placeholder="Role" oninput="this.className = ''" id="role" name="role">
+      <input placeholder="Role" oninput="this.className = ''" id="role" name="role" type="text">
      </div>
      <div class="field"> 
      <span>Reporting Head:</span>
-      <input placeholder="Reporting Head" oninput="this.className = ''" id="rhead" name="rhead">
+      <input placeholder="Reporting Head" oninput="this.className = ''" id="rhead" name="rhead" type="text">
       </div>
       <div class="field">
        Blood Group:
-      <input placeholder="Blood Group" id="bgroup"oninput="this.className = ''" name="bloodgroup">
+      <input placeholder="Blood Group" id="bgroup"oninput="this.className = ''" name="bloodgroup" type="text">
       </div>
       <div class="field">
    <span>Type of Employee:</span>
@@ -87,7 +87,12 @@
         <option value="Vendor Employee">Vendor Employee</option>
    </select>
    </div>
-   <hr/>
+   <div class="field">
+   <span>Email Address:</span>
+           <input placeholder="Email Address" id="email"  oninput="this.className = ''" name="email" type="text">
+   </div>
+  </div>
+<hr/>
    <div class="address">
    <div class="box current">
    <div class="field">
@@ -98,34 +103,28 @@
 <div class="box place">
     <div class="field">
    <span>Sub Urban:</span> 
-       <input placeholder="Sub urban" oninput="this.className = ''" id="surban" name="surban"><br/>
+       <input placeholder="Sub urban" oninput="this.className = ''" id="surban" name="surban" type="text"><br/>
 </div>
    <div class="field">
    <span>State:</span> 
-       <input placeholder="State" oninput="this.className = ''" id="state"name="state">
+       <input placeholder="State" oninput="this.className = ''" id="state"name="state" type="text">
   </div>
 </div>
 <div class="box pincode">
    <div class="field">
    <span>Pincode:</span>
-       <input placeholder="Pincode" maxlength="6" oninput="this.className = ''"  id="pincode"name="pincode">
+       <input placeholder="Pincode" maxlength="6" oninput="this.className = ''"  id="pincode"name="pincode" type="text">
     </div>
-</div>
-<div class="box email">
-   <div class="field">
-   <span>Email Address:</span>
-           <input placeholder="Email Address" id="email"  oninput="this.className = ''" name="email">
-   </div>
 </div>
 <div class="box mobile">
    <div class="field">
-   <span>Mobile number:</span>
-           <input placeholder="Mobile Number"  id="pmobile" oninput="this.className = ''" name="pmobile">
+   <span>Mobile number:</span> 
+           <input placeholder="Mobile Number"  id="pmobile" oninput="this.className = ''" name="pmobile" type="text">
 </div>
 </div>
 </div>
+<br/>
 <hr/>
-
 <div class="address">
    <div class="box current">
    <input type="checkbox" onclick="copyAddress()"  id="copy"  />Same as Current address<br/>
@@ -137,31 +136,31 @@
 <div class="box place">
     <div class="field">
      <span>Sub Urban:</span>
-       <input placeholder="Sub urban" oninput="this.className = ''" id="psurban" name="psurban"><br/>
+       <input placeholder="Sub urban" oninput="this.className = ''" id="psurban" name="psurban" type="text"><br/>
     </div>
     <div class="field">
    <span> State:</span>
-       <input placeholder="State" oninput="this.className = ''" id="pstate"name="pstate">
+       <input placeholder="State" oninput="this.className = ''" id="pstate"name="pstate" type="text">
     </div>
 </div>
 <div class="box pincode">
 <div class="field">
   <span> Pincode:</span>
-       <input placeholder="Pincode" maxlength="6" oninput="this.className = ''"  id="ppincode"name="ppincode">
+       <input placeholder="Pincode" maxlength="6" oninput="this.className = ''"  id="ppincode"name="ppincode" type="text">
  </div>
 </div>
 <div class="box mobile">
   <div class="field">
   <span>Mobile number:</span> 
-    <input placeholder="Mobile Number"  id="smobile" oninput="this.className = ''" name="smobile">
+    <input placeholder="Mobile Number"  id="smobile" oninput="this.className = ''" name="smobile" type="text">
   </div>
 
 </div>
 </div>
-  </div>
-    <div style="overflow:auto;">
-    <div>
 
+
+<div style="overflow:auto;">
+<div>
       <button  style="float:right;" type="button" id="nextBtn" onclick="nextPrev()">Submit</button>
     </div>
   </div>

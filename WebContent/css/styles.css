@@ -2,15 +2,34 @@
   background-color: #ffffff;
   margin: 100px auto;
   font-family: Raleway;
-  padding: 40px;
+  padding: 30px;
   width: 75%;
   min-width: 300px;
 }
 * {
   box-sizing: border-box;
   margin-top: 18px;
-  margin-bottom: 17px;
+  margin-bottom: 10px;
   font-family: Raleway;
+}
+.tab{
+	display:flex;
+	flex-wrap:wrap;
+}
+.field{
+	width:33%;
+}
+.field input[type="text"],input[type="date"],select{
+	width:90%;
+}
+.place{
+	 padding-left:10%;
+}
+.place input[type="text"],.pincode input[type="text"],.mobile input[type="text"]{
+    width: 250%;
+}
+#select,#radio{
+	width:50%;
 }
 body {
   background-color: #f1f1f1;
@@ -30,20 +49,16 @@ input {
   font-size: 17px;
   font-family: Raleway;
   border: 1px solid #aaaaaa;
-  margin-right:1.5em;
+  margin-right:1em;
 }
-select{
-	margin-right:1.5em;
-}
+
 #employee{
-	width:50%;
 	padding:1%;
 	  font-size: 17px;
 }
 #status{
 	padding:1%;
 	font-size: 17px;
-	margin-left:4em;
 }
 textarea{
     font-size: 17px;
@@ -86,6 +101,7 @@ input.invalid ,.invalid{
 .logo{
 	width:20%;
 }
+
 #psurban{
 	margin-top:15%;
 }
@@ -94,29 +110,26 @@ input[type="file"]{
 	margin-top:-10%;
 	margin-left:5%;
 }
-#role,#rhead{
-	width:24%;
-}
-#salutation{
-	width:15%;
-}
-#dob,#jdate{
-	width:18%;
+.current, .place{
+	width:50%;
 }
 .address{
 	display:flex;
 	flex-wrap:wrap;
 	width:100%;
 }
-.current,.place{
-	width:50%;
-}
-#pincode,#ppincode{
-	width:50%;
-}
-.pincode{
-	width:20%;
-}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2.5px;
+    border-color:#ffda79;
+    color:#ffda79;
+    background-color:#ffda79;
+} 
 @media screen and (max-width : 320px) {
 .logo{
 	width:100%;
