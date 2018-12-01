@@ -132,6 +132,10 @@ hr {
     border-color:#ffda79;
     color:#ffda79;
     background-color:#ffda79;
+}
+textarea {
+    height: 6em;
+    width: 200%;
 } 
 @media screen and (max-width : 320px) {
 .logo{
