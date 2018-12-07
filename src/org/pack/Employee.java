@@ -5,7 +5,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
+import java.util.*;
 import com.mysql.jdbc.StringUtils;
 public class Employee {
 	private  Connection con;
@@ -79,6 +79,23 @@ public class Employee {
     	} catch (SQLException e) {
 			e.printStackTrace();
 		}
+    	long max =0;
+    	try {
+        	String sql = "Select max(a.id) from ephoto a";
+            PreparedStatement pstm = con.prepareStatement(sql);
+            ResultSet rs = pstm.executeQuery();
+            
+    			if (rs.next()) {
+    			   max = rs.getLong(1);
+    			}
+    		pstm=con.prepareStatement("Update kriger.ephoto set eid=? where id=?");	
+    		pstm.setString(1, eid);
+    		pstm.setLong(2, max);
+    		pstm.executeUpdate();
+    		} catch (SQLException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
     	return eid;
     	 }
     
@@ -117,6 +134,7 @@ public class Employee {
     	} catch (SQLException e) {
 			e.printStackTrace();
 		}
+    	
     	return 1;
     	 }
     public int insertVendor(String[] emp){

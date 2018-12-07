@@ -158,35 +158,98 @@ textarea {
 	width:100%;
 }
 }
-@media screen and (min-width:321px ) and (max-width: 680px) {
-.head{
-	width:100%;
-    margin-left:0px;
-    margin-right:0px;
+@media screen and (min-width:450px ) and (max-width: 650px) {
+#radio{
+	width:70%;
+}
+.box {
+    width: 100%;
+}
+h1{
+	font-size:1.5em;
+}
+h2{
+	font-size:1em;
 }
 .logo{
-   width:55%; 
-   margin-left:auto;
-   margin-right:auto;
+	width:35%;
+	padding-left:1.5em;
 }
-#mname{
+.title{
+	width:50%;
+}
+#pass{
+	margin-left:35%;
+}
+
+#regForm {
+ background-color:white;
+  padding:0;
+  width: 100%;
+  margin-top:0px;
+}
+.field,.current{
 	width:100%;
 }
-#photo{
-	padding-left:0px;
+.place input[type="text"],.pincode input[type="text"]{
+	width:90%;
+
 }
-.title,#email{
+.mobile input[type="text"]{
+	width:90%;
+}
+.place{
+		padding:0;
+}
+textarea {
+    height: 5em;
+    width: 180%;
+} 
+	}
+	
+	@media screen and (min-width:300px ) and (max-width: 450px) {
+.logo{
+	width:100%;
+	padding-left:7em;
+}
+#radio {
+    width: 100%;
+}
+.title{
 	width:100%;
 }
 #pass{
-	margin-left:25%;
-    margin-right:25%;
-    
+	margin-left:30%;
 }
-#salutation,#fname,#lname,#dob,#jdate,#role,#rhead,#employee,#bank,.current,textarea,.pincode,#pincode,#bgroup,#ppincode{
+	
+#regForm {
+ background-color:white;
+  padding:0;
+  width: 100%;
+  margin-top:0px;
+}
+.field,.current{
 	width:100%;
 }
+.place input[type="text"]{
+	width:150%;
+}
+.pincode input[type="text"]{
+	width:100%;
+}
+.mobile input[type="text"]{
+	width:100%;
+}
+.place{
+		padding:0;
+}
+textarea {
+    height: 5em;
+    width: 180%;
+} 
 	}
+	
+	
 @media screen and (min-width:980px) and (max-width:1100px){
 	.field{
 	width:50%;
@@ -201,4 +264,5 @@ textarea {
 	width:30%;
 	padding-left:1.5em;
 }
+
 }
